@@ -1,0 +1,26 @@
+.prod {
+  margin: 48px 0;
+}
+
+.prod__title {
+  font-size: 20px;
+}
+
+.prod__list {
+  list-style: none;
+  font-size: 14px;
+}
+
+.prod__list-item {
+  background-color: #f2f7ff;
+  margin-bottom: 8px;
+}
+
+.prod__list-item:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.prod__accent {
+  margin-right: 16px;
+  font-weight: 700;
+}

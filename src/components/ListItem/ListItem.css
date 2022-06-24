@@ -1,0 +1,9 @@
+.listitem{
+  list-style: none;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.listitem:hover{
+  text-decoration: underline;
+}

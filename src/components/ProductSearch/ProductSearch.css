@@ -1,0 +1,34 @@
+.prod-search__form {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.prod-search__input {
+  margin: 0 16px;
+  min-height: 24px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding-left: 12px;
+}
+
+.prod-search__submit {
+  max-width: 120px;
+  width: 100%;
+  font-weight: 700;
+  min-height: 30px;
+  border-radius: 10px;
+  background-color: #395eac;
+  border: none;
+  color: white;
+  list-style: none;
+  cursor: pointer;
+}
+
+.prod-search__error{
+  font-weight: normal;
+  font-size: 14px;
+  color: red;
+  margin-left: 24px
+}

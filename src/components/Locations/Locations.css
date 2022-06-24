@@ -1,0 +1,46 @@
+.locations {
+  max-width: 320px;
+  padding: 40px 24px;
+  background-color: #e6effc;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.locations__title {
+  font-size: 18px;
+}
+
+.locations__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.locations__input {
+  margin: 16px 0;
+  min-height: 24px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding-left: 12px;
+  font-size: 16px;
+}
+
+.locations__submit {
+  max-width: 120px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  min-height: 36px;
+  border-radius: 10px;
+  background-color: #395eac;
+  border: none;
+  color: white;
+  list-style: none;
+  cursor: pointer;
+}
+
+.locations__error{
+  color: red;
+  font-size: 12px;
+  margin-top: 16px
+
+}

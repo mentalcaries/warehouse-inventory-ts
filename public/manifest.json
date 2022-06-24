@@ -1,0 +1,9 @@
+{
+  "short_name": "JLS App",
+  "name": "App Snapp",
+
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
