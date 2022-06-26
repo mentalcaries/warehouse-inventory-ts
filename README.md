@@ -1,6 +1,6 @@
 # Warehouse Inventory Management System
 
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/f3Lgxp8fYeQ
 #### Description:
 
 This is a simple application for inventory management system that includes
