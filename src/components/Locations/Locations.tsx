@@ -4,26 +4,28 @@ import { Product } from '../../utils/types';
 import './Locations.css';
 
 function Locations({onUpdate, location}:{onUpdate: Function, location: Product}) {
-  const [newQuantity, setNewQuantity] = useState<number>(0);
+  const [newQuantity, setNewQuantity] = useState<string>('');
+  const [formValue, setFormValue] = useState()
   const [inventoryError, setInventoryError] = useState(false);
 
   const {Core, Location, Quantity, Warehouse} = location;
 
   function handleQuantityChange(evt:React.FormEvent<HTMLInputElement>):void {
-    setNewQuantity(parseInt(evt.currentTarget.value));
+    setNewQuantity(evt.currentTarget.value);
   }
-  
+
   // Submit new value, but reject number less than inventory
   function handleQuantitySubmit(evt:React.SyntheticEvent) {
     evt.preventDefault();
-    if (Quantity + newQuantity >= 0) {
+    
+    if (Quantity + parseInt(newQuantity) >= 0) {
       setInventoryError(false);
       onUpdate({
         quantity: newQuantity,
         core: Core,
         location: Location,
       });
-      setNewQuantity(0);
+      setNewQuantity('');
     }
      else setInventoryError(true);
   }

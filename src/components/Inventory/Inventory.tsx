@@ -3,7 +3,7 @@ import ProductList from '../ProductList/ProductList';
 import ProductSearch from '../ProductSearch/ProductSearch';
 import Locations from '../Locations/Locations';
 import React from 'react';
-import { Product, Props } from '../../utils/types';
+import { Product } from '../../utils/types';
 
 interface InventoryProps {
   onLookup: (query:string) => void;

@@ -31,13 +31,3 @@ export interface Product {
   Notes: string;
 }
 
-export interface Props {
-  onLookup: Function;
-  lookupError?: boolean;
-  prodList?: Product[];
-  onCoreSearch: Function;
-  prodStats?: [];
-  isStocked?: boolean;
-  inventory?: Product[]
-  onUpdate?: Function;
-}
