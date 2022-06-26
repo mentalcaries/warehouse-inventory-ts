@@ -9,7 +9,7 @@ function Navigation(){
       <NavLink to="/viewer" 
       className={({ isActive }) => "nav__link" + (isActive ? " nav__link_active" : "")}
       >Product Viewer</NavLink>
-      <NavLink to="/inventory" className={({ isActive }) => "nav__link" + (isActive ? " nav__link_active" : "")}>Inventory Adjustment</NavLink>
+      <NavLink to="/inventory" className={({ isActive }) => "nav__link" + (isActive ? " nav__link_active" : "")}>Inventory Manager</NavLink>
     </nav>
   )
 }

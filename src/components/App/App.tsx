@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import Viewer from '../Viewer/Viewer';
 import Inventory from '../Inventory/Inventory';
 import {getInventory, getProdInfo, getProdStats, updateInventory} from '../../utils/api';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import Footer from '../Footer/Footer';
 import Main from '../Main/Main';
 import React from 'react';
@@ -23,6 +23,10 @@ function App() {
   const [isStocked, setIsStocked] = useState(true);
   const [inventory, setInventory] = useState<[]>([]);
 
+
+  useEffect(()=>{
+    setProdlist([])
+  },[])
 
   function handleLookup(query:string):void {
     setProdlist([]);

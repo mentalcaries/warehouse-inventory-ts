@@ -5,7 +5,6 @@ import './Locations.css';
 
 function Locations({onUpdate, location}:{onUpdate: Function, location: Product}) {
   const [newQuantity, setNewQuantity] = useState<string>('');
-  const [formValue, setFormValue] = useState()
   const [inventoryError, setInventoryError] = useState(false);
 
   const {Core, Location, Quantity, Warehouse} = location;
