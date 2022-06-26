@@ -23,9 +23,8 @@ function App() {
   const [isStocked, setIsStocked] = useState(true);
   const [inventory, setInventory] = useState<[]>([]);
 
-  console.log(prodStats)
 
-  function handleLookup(query:string) {
+  function handleLookup(query:string):void {
     setProdlist([]);
     setProdStats([]);
     setLookupError(false);

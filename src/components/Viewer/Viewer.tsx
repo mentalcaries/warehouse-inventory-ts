@@ -1,11 +1,20 @@
 import React from 'react';
-import { Props } from '../../utils/types';
+import { Product } from '../../utils/types';
 import ProductList from '../ProductList/ProductList';
 import ProductSearch from '../ProductSearch/ProductSearch';
 import ProductStats from '../ProductStats/ProductStats';
 import './Viewer.css';
 
 /////////////////////
+
+interface ViewerProps {
+  onLookup: (query:string) => void;
+  lookupError: boolean;
+  prodList: Product[];
+  onCoreSearch: (coreValue: string) => void;
+  prodStats: Product[];
+  isStocked: boolean;
+}
 
 function Viewer({
   onLookup,
@@ -14,7 +23,7 @@ function Viewer({
   onCoreSearch,
   prodStats,
   isStocked,
-}: Props) {
+}: ViewerProps) {
   return (
     <section className="viewer">
       <h2 className="viewer__title">Product Lookup</h2>
@@ -26,8 +35,13 @@ function Viewer({
         isStocked={isStocked}
       />
 
-      <ProductList prodList={prodList} onCoreSearch={onCoreSearch} onLookup={onLookup}/>
-      {prodStats && prodStats.length > 0 && <ProductStats prodStats={prodStats} />}
+      <ProductList
+        prodList={prodList}
+        onCoreSearch={onCoreSearch}
+      />
+      {prodStats && prodStats.length > 0 && (
+        <ProductStats prodStats={prodStats} />
+      )}
     </section>
   );
 }

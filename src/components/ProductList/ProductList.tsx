@@ -3,7 +3,14 @@ import { Product } from '../../utils/types';
 import ListItem from '../ListItem/ListItem';
 import './ProductList.css';
 
-function ProductList({prodList, onCoreSearch}:{prodList: Product[], onCoreSearch: Function}) {
+interface ProductListProps{
+  prodList: Product[];
+  onCoreSearch: Function;
+
+}
+
+
+function ProductList({prodList, onCoreSearch} : ProductListProps) {
   return (
     <div className="prodlist">
       <ul>

@@ -32,10 +32,10 @@ export interface Product {
 }
 
 export interface Props {
-  onLookup?: Function;
+  onLookup: Function;
   lookupError?: boolean;
   prodList?: Product[];
-  onCoreSearch?: Function;
+  onCoreSearch: Function;
   prodStats?: [];
   isStocked?: boolean;
   inventory?: Product[]

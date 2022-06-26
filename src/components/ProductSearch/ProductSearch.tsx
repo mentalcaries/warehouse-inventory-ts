@@ -1,22 +1,31 @@
 import './ProductSearch.css';
-import {useState} from 'react';
+import { useState } from 'react';
 import React from 'react';
-import { Props } from '../../utils/types';
 
-function ProductSearch({onLookup, lookupError, isStocked}:Props) {
+interface ProductSearchProps {
+  onLookup: (query: string) => void;
+  lookupError: boolean;
+  isStocked: boolean;
+}
+
+function ProductSearch({
+  onLookup,
+  lookupError,
+  isStocked,
+}: ProductSearchProps) {
   const [query, setQuery] = useState('');
   const [placeholder, setPlaceholder] = useState('Core-12900k');
 
-  function handleInputChange(evt: React.FormEvent<HTMLInputElement>):void {
+  function handleInputChange(evt: React.FormEvent<HTMLInputElement>): void {
     setQuery(evt.currentTarget.value);
   }
 
-  function handleSearchSubmit(evt:React.SyntheticEvent):void {
+  function handleSearchSubmit(evt: React.SyntheticEvent): void {
     evt.preventDefault();
     if (query === '') {
       setPlaceholder('Enter an item');
     }
-    onLookup!(query);
+    onLookup(query);
   }
 
   return (

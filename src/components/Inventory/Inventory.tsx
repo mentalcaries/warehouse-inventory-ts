@@ -5,6 +5,16 @@ import Locations from '../Locations/Locations';
 import React from 'react';
 import { Product, Props } from '../../utils/types';
 
+interface InventoryProps {
+  onLookup: (query:string) => void;
+  onCoreSearch: Function;
+  isStocked: boolean;
+  lookupError: boolean;
+  prodList: Product[];
+  inventory: Product[];
+  onUpdate: Function;
+}
+
 function Inventory({
   onLookup,
   onCoreSearch,
@@ -12,11 +22,12 @@ function Inventory({
   lookupError,
   prodList,
   inventory,
-}:Props, onUpdate:Function) {
+  onUpdate,
+}: InventoryProps) {
   const hasInventory = inventory && inventory.length > 0;
 
   let globalTotal = 0;
-  inventory?.map((prod:Product) => {
+  inventory?.map((prod: Product) => {
     return (globalTotal = globalTotal + prod.Quantity);
   });
 
@@ -42,7 +53,7 @@ function Inventory({
         </div>
       )}
       <div className="inventory__locations">
-        {inventory?.map((location:Product) => {
+        {inventory?.map((location: Product) => {
           return (
             <Locations
               location={location}
