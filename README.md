@@ -1,5 +1,11 @@
 # Warehouse Inventory Management System
 
+<img
+  src="./src/images/preview.png"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 500px">
+
 #### Video Demo:  https://youtu.be/f3Lgxp8fYeQ
 #### Description:
 
