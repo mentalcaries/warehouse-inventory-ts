@@ -1,4 +1,4 @@
-const BASE_URL = 'https://jlsinventory.herokuapp.com/';
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 function checkRes(res: any) {
   if (res.ok) {
